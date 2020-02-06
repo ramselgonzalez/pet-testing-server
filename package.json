@@ -1,0 +1,25 @@
+{
+  "name": "pet-testing-server",
+  "version": "1.0.0",
+  "description": "An express.js/apollo-server backend to help test react-testing-library with apollo-client.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ramsel Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.16",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
