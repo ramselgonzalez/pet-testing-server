@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = {};
 
-db.sequelize = new Sequelize('petlibrary', 'postgres', 'rlgpg100328', {
+db.sequelize = new Sequelize('postgres://lola:d7y8jgdf903@localhost/ramselgonzalez', {
   dialect: 'postgres'
 });
 
