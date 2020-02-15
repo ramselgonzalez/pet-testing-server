@@ -9,6 +9,14 @@ const typeDefs = gql`
     SNAKE
   }
 
+  enum ToyEnum {
+    BALL
+    BONE
+    ROPE
+    SQUEAKER
+    STUFFED_ANIMAL
+  }
+
   type User {
     id: ID!
     email: String!
@@ -17,11 +25,18 @@ const typeDefs = gql`
     pets: [Pet]!
   }
 
+  type Toy {
+    id: ID!
+    name: ToyEnum!
+    description: String!
+  }
+
   type Pet {
     id: ID!
     age: Int!
     name: String!
     species: Species!
+    toys: [Toy]!
   }
 
   type Query {
@@ -31,7 +46,9 @@ const typeDefs = gql`
 
   type Mutation {
     addPet(age: Int!, name: String!, species: Species!): Pet!
-    deletePet(id: ID): Pet!
+    addToy(id: ID!, description: String!, name: ToyEnum!): Toy!
+    deletePet(id: ID!): Pet!
+    deleteToy(id: ID!): Toy!
     logIn(email: String!, password: String!): LogInResponse!
     signUp(
       email: String!

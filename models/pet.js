@@ -17,6 +17,7 @@ const pet = (sequelize, DataTypes) => {
 
   Pet.associate = models => {
     Pet.belongsTo(models.User);
+    Pet.hasMany(models.Toy);
   };
 
   return Pet;

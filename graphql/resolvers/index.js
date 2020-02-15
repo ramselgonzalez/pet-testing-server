@@ -1,16 +1,20 @@
 const { User, user } = require('./queries/user');
-const { pet } = require('./queries/pets');
+const { Pet, pet } = require('./queries/pets');
 const { signUp, logIn } = require('./mutations/auth');
-const { addPet, deletePet } = require('./mutations/pets');
+const { addPet, deletePet, addToy, deleteToy } = require('./mutations/pets');
+
 const resolvers = {
   Query: {
     pet,
     user
   },
   User,
+  Pet,
   Mutation: {
     addPet,
+    addToy,
     deletePet,
+    deleteToy,
     signUp,
     logIn
   }
